@@ -1,0 +1,269 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    min-height:100vh;
+    background:#050816;
+    color:white;
+    overflow-x:hidden;
+}
+
+.bg-gradient{
+    position:fixed;
+    width:700px;
+    height:700px;
+    background:linear-gradient(135deg,#3b82f6,#9333ea);
+    border-radius:50%;
+    filter:blur(140px);
+    opacity:.25;
+    top:-200px;
+    right:-100px;
+    z-index:0;
+}
+
+.app{
+    position:relative;
+    z-index:1;
+    display:flex;
+    min-height:100vh;
+    padding:40px;
+    gap:40px;
+}
+
+.left-panel{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+    margin-bottom:30px;
+}
+
+.left-panel h1{
+    font-size:64px;
+    line-height:1.1;
+    margin-bottom:25px;
+}
+
+.description{
+    color:#94a3b8;
+    font-size:18px;
+    max-width:550px;
+    line-height:1.7;
+    margin-bottom:35px;
+}
+
+.features{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.feature-card{
+    padding:14px 22px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:14px;
+    backdrop-filter:blur(12px);
+    transition:.3s;
+}
+
+.feature-card:hover{
+    transform:translateY(-4px);
+    background:rgba(255,255,255,.1);
+}
+
+.right-panel{
+    width:500px;
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.glass-card{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(18px);
+    border-radius:30px;
+    padding:35px;
+}
+
+.glass-card h2{
+    margin-bottom:25px;
+    font-size:28px;
+}
+
+.upload-area{
+    border:2px dashed rgba(255,255,255,.15);
+    border-radius:24px;
+    padding:50px 25px;
+    text-align:center;
+    cursor:pointer;
+    transition:.3s;
+    display:block;
+}
+
+.upload-area:hover{
+    border-color:#60a5fa;
+    background:rgba(255,255,255,.04);
+    transform:scale(1.01);
+}
+
+.upload-icon{
+    font-size:55px;
+    margin-bottom:18px;
+}
+
+.upload-area h3{
+    font-size:24px;
+    margin-bottom:8px;
+}
+
+.upload-area p{
+    color:#94a3b8;
+}
+
+.upload-limit{
+    display:inline-block;
+    margin-top:15px;
+    color:#60a5fa;
+    font-size:14px;
+}
+
+.file-preview{
+    margin-top:20px;
+    background:rgba(255,255,255,.06);
+    border-radius:18px;
+    padding:16px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.file-left{
+    font-size:32px;
+}
+
+.file-details{
+    display:flex;
+    flex-direction:column;
+}
+
+#fileName{
+    font-weight:600;
+    word-break:break-word;
+}
+
+button{
+    width:100%;
+    margin-top:25px;
+    padding:18px;
+    border:none;
+    border-radius:18px;
+    background:linear-gradient(135deg,#2563eb,#9333ea);
+    color:white;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-3px);
+    opacity:.92;
+}
+
+.loading{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+    margin-top:25px;
+}
+
+.loader{
+    width:25px;
+    height:25px;
+    border:3px solid rgba(255,255,255,.2);
+    border-top:3px solid white;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+.results{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.result-card{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+    padding:28px;
+    backdrop-filter:blur(16px);
+}
+
+.result-card h3{
+    margin-bottom:15px;
+    color:#60a5fa;
+}
+
+.result-card p{
+    line-height:1.8;
+    color:#e2e8f0;
+}
+
+.hidden{
+    display:none;
+}
+
+@media(max-width:1100px){
+
+    .app{
+        flex-direction:column;
+    }
+
+    .right-panel{
+        width:100%;
+    }
+
+    .left-panel h1{
+        font-size:48px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .app{
+        padding:20px;
+    }
+
+    .left-panel h1{
+        font-size:38px;
+    }
+
+    .glass-card{
+        padding:25px;
+    }
+
+    .upload-area{
+        padding:35px 20px;
+    }
+
+}
