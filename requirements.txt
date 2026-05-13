@@ -4,4 +4,4 @@ openai-whisper
 python-dotenv
 torch
 numpy
-ffmpeg--
+ffmpeg-python
