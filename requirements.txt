@@ -3,6 +3,6 @@ gunicorn
 groq
 python-dotenv
 numpy
-torch
+torch==2.14.0+cpu
 openai-whisper
 ffmpeg-python
