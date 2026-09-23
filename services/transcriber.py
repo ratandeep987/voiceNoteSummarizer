@@ -1,11 +1,7 @@
-from groq import Groq
+import whisper
 
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+model = whisper.load_model("tiny")
 
-def transcribe(audio_file_path):
-    with open(audio_file_path, "rb") as file:
-        transcription = client.audio.transcriptions.create(
-            file=(audio_file_path, file.read()),
-            model="whisper-large-v3"
-        )
-    return transcription.text
+def transcribe_audio(file_path):
+    result = model.transcribe(file_path)
+    return result["text"]

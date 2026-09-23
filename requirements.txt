@@ -1,5 +1,8 @@
 Flask==3.0.3
+gunicorn
 groq
 python-dotenv
 numpy
-gunicorn
+torch
+openai-whisper
+ffmpeg-python
